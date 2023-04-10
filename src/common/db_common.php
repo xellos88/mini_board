@@ -39,7 +39,7 @@ function select_board_info_paging(&$param_arr)
     ." WHERE " 
     ."  board_del_flg = '0' "
     ." ORDER BY "
-    ."  board_no ASC "
+    ."  board_no DESC "
     ." limit :limit_num OFFSET :offset "
     ;
 
@@ -67,6 +67,38 @@ function select_board_info_paging(&$param_arr)
     }
     return $result;
 }
+
+function select_board_info_cnt()
+{
+    $sql =
+        " SELECT "
+        ."      COUNT(*) cnt"
+        ." FROM "
+        ."      board_info "
+        ." where "
+        ."      board_del_flg  = '0' "
+        ;
+    $arr_prepare = array();
+
+    $conn = null;
+    try{
+        db_conn( $conn );
+        $stmt = $conn-> prepare( $sql );
+        $stmt -> execute( $arr_prepare );
+        $result = $stmt->fetchAll();
+    }
+    catch( Exception $e)
+    {
+        return $e->getMessage();
+    }
+
+    finally
+    {
+        $conn=null;
+    }
+    return $result;
+}
+
 //TODO: test Start
 // $arr=
 //     array(
