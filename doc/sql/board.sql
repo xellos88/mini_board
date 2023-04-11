@@ -12,16 +12,31 @@
 -- );
 -- 
 -- DESC board_info
+-- 
+-- INSERT INTO board_info(
+-- 	board_title 
+-- 	,board_contents
+--  	,board_write_date 
+-- )
+-- VALUES ('제목21','내용21',NOW()),('제목22','내용22',NOW()),('제목23','내용23',NOW()),('제목24','내용24',NOW())
+-- 		,('제목25','내용25',NOW()),('제목26','내용26',NOW()),('제목27','내용27',NOW()),('제목28','내용28',NOW())
+-- 		,('제목29','내용29',NOW()),('제목30','내용30',NOW());
 
-INSERT INTO board_info(
-	board_title 
-	,board_contents
- 	,board_write_date 
-)
-VALUES ('제목1','내용1',NOW()),('제목2','내용2',NOW()),('제목3','내용3',NOW()),('제목4','내용4',NOW())
-		,('제목5','내용5',NOW()),('제목6','내용6',NOW()),('제목7','내용7',NOW()),('제목8','내용8',NOW())
-		,('제목9','내용9',NOW()),('제목10','내용10',NOW());
-
-SELECT * FROM board_info;
-
+-- SELECT * FROM board_info;
+-- 
 COMMIT;
+-- 
+-- SELECT
+-- 	board_title 
+-- 	,board_contents
+--  	,board_write_date  
+-- FROM 
+-- 	board_info
+-- WHERE 
+-- 	board_del_flg = '0'
+-- ORDER BY 
+-- 	board_no ASC
+-- limit 5 OFFSET 0
+-- ;
+
+SELECT COUNT(board_no) FROM board_info WHERE board_del_flg = '0'

@@ -99,6 +99,95 @@ function select_board_info_cnt()
     return $result;
 }
 
+function select_board_info_no(&$param_no)
+{
+    $sql=
+    " SELECT "
+    ." board_no "
+    ." ,board_title "
+    ." ,board_contents "
+    ." FROM "
+    ."  board_info "
+    ." WHERE " 
+    ."  board_no = :board_no "
+    ;
+
+    $arr_prepare = 
+    array(
+        ":board_no"    => $param_no
+    );
+
+    $conn = null;
+    try{
+        db_conn( $conn );
+        $stmt = $conn-> prepare( $sql );
+        $stmt -> execute( $arr_prepare );
+        $result = $stmt->fetchAll();
+    }
+    catch( Exception $e)
+    {
+        return $e->getMessage();
+    }
+
+    finally
+    {
+        $conn=null;
+    }
+    return $result[0];
+
+}
+//
+//함수명    : update_board_info_no
+//기능      : 게시판 특정 게시글 정보 수정
+//파라미터  : Array             &$param_arr
+//리턴값    : INT/STRING        $result_cnt/ERRMSG
+function update_board_info_no( &$param_arr )
+{   
+    $sql=
+        " UPDATE "
+        ." board_info "
+        ." SET "
+        ." board_title = :board_title "
+        ." ,board_contents = :board_contents "
+        ." WHERE "
+        ." board_no =:board_no "
+        ;
+        $arr_prepare = 
+            array(
+                ":board_title"=>$param_arr["board_title"]
+                ,":board_contents"=>$param_arr["board_contents"]
+                ,":board_no" => $param_arr["board_no"]
+            );
+        $conn = null;
+        try{
+            db_conn( $conn ); //db연결
+            $conn->beginTransaction(); //transaction 시작
+            $stmt = $conn->prepare( $sql );//statement object 셋팅
+            $stmt->execute( $arr_prepare );//db request
+            $result_cnt = $stmt->rowCount();//query 적용 recode 갯수
+            $conn->commit();
+        }
+        catch( Exception $e)
+        {
+            return $e->getMessage();
+        }
+    
+        finally
+        {
+            $conn=null;
+        }
+        return $result_cnt;    
+}
+
+$arr= array(
+        "board_no" => 1
+        ,"board_title" => "test1"
+        ,"board_contents" => "testtest1");
+// echo update_board_info_no( $arr );
+
+// $i=1;
+// // print_r(select_board_info_no($i));
+
 //TODO: test Start
 // $arr=
 //     array(

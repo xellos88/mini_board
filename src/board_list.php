@@ -34,6 +34,8 @@
     $result_cnt = select_board_info_cnt();
     // print_r ( $result_cnt );
     // print_r( $max_page_num );
+
+    $last_page_num=6;
 ?>
 
 
@@ -46,8 +48,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>게시판</title>
-
     <style>
+
     .pagination-link {
         display: inline-block;
         padding: 6px 12px;
@@ -66,16 +68,57 @@
     .pagination-link:hover {
         background-color: #eee;
     }
+
+    .h1{
+        font-size: 40px;
+        text-align: center;
+        vertical-align: middle;   
+    }
+
+    .menu-bar {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    }
+    .item {
+    color: white;
+    background-color: transparent;
+    font-size: 18px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 14px 20px;
+    }
+    .item.title {
+    font-weight: 600;
+    }
+    .item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    }
+    .pagination{
+        text-align: center;
+        vertical-align: middle;
+    }
 </style>
 
 </head>
 <body>
+    <nav class="menu-bar">
+    <div class="group">
+        <a class="item title">메인화면</a>
+    </div>
+    <div class="group">
+        <a class="item link1">링크1</a>
+        <a class="item link2">링크2</a>
+    </div>
+    </nav>
+    <h1 class='h1'>자유게시판</h1>
     <table class='table table-hover'>
         <thead>
             <tr>
-                <th>게시글 번호</th>
-                <th>게시글 제목</th>
-                <th>작성일자</th>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성일</th>
             </tr>
         </thead>
         <tbody>
@@ -84,24 +127,37 @@
                 {
             ?>
                 <tr>
-                <td><?php echo $recode["board_no"]?></td>
-                <td><?php echo $recode["board_title"]?></td>
-                <td><?php echo $recode["board_write_date"]?></td>
+                    <td><?php echo $recode["board_no"]?></td>
+                    <td><a href="board_update.php?board_no=<?php echo $recode["board_no"]?> "><?php echo $recode["board_title"]?></a></td>
+                    <td><?php echo $recode["board_write_date"]?></td>
                 </tr>
             <?php        
                 }
             ?>    
         </tbody>
     </table>
-    <?php
-        for ( $i = 1; $i <=$max_page_num; $i++) 
-        {
+        <nav aria-label="Page navigation example">
+        <ul class="pagination">
+        <li class="page-item">
+        <a class="page-link" href="board_list.php?page_num=1" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        </a>
+        </li>
+        <?php
+        for ($i = 1; $i <= $max_page_num; $i++) {
         ?>
-            <a href='board_list.php?page_num=<?php echo $i?>' class='pagination-link'><?php echo $i ?></a>
-
+        <li class="page-item"><a class="page-link" href="board_list.php?page_num=<?php echo $i ?>"><?php echo $i ?></a></li>
         <?php
         }
         ?>
+        <li class="page-item">
+        <a class="page-link" href="board_list.php?page_num=<?php echo $last_page_num ?>" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        </a>
 
-</body>
+
+        </li>
+    </ul>
+    </nav>
+
 </html>
