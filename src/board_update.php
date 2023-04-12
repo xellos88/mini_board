@@ -27,14 +27,11 @@ else
     );
     //update
     $result_cnt = update_board_info_no( $arr_info );
-    $result_info = select_board_info_no( $arr_post["board_no"] );
+    // $result_i
+    header( "Location: board_detail.php?board_no=".$arr_post["board_no"] );
+    exit(); //   redirect 했기 때문에 이후의 소스코드는 실행할 필요가 없다.위에행에서 nfo = select_board_info_no( $arr_post["board_no"] ); // 0412 del
     }
-// if(array_key_exists( "board_no " , $_GET))
-// {
-//     $board_no = $_GET["board_no"];
-// }
-// $result_info = select_board_info_no( $board_no );
-// // print_r($result_info);
+
 ?>
 
 <!DOCTYPE html>
@@ -77,7 +74,8 @@ else
         <input type="text" name="board_contents" id="contents"value="<?php echo $result_info['board_contents']?>" >
         <br>
         <button type='sumit' class="btn">수정</button>
-        <button type='button' class="btn" onclick="location.href='http://localhost/mini_board/src/board_list.php?page_num=1'">리스트</button>
-    </form>    
+        <button type='button' class="btn"><a href="board_detail.php?board_no=<?php echo $result_info["board_no"]; ?>">취소</a></button>
+    </form>
+    <button type='button' class="btn">리스트</a></button>    
 </body>
 </html>
