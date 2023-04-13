@@ -21,7 +21,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail</title>
     <style>
-
+        
+    a.btn{
+        display:block;
+        width:80px;
+        line-height:30px;
+        text-align:center;
+        background-color:#222;
+        color:#fff;
+    }
+    
+    button.btn{
+        width:80px;
+        height:30px;
+        border:none;
+        background-color:#222;
+        color:#fff;
+    }
     </style>
 </head>
 <body>

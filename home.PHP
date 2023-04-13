@@ -42,7 +42,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>week_9</title>
+        <title>MINI PROJECT</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <link rel="stylesheet" href="./static/font.css">
         <link rel="stylesheet" href="./static/layout.css">
         <link rel="stylesheet" href="./static/home.css">
@@ -52,12 +53,12 @@
             <div class="bookdot">
                 <div class="page">
                     <div class="column1">
-                        <div class="visit"><span id="basic-text">TODAY <span id="TODAY">28</span> | TOTAL 24562</span></div>
+                        <div class="visit"><span id="basic-text">TODAY <span id="TODAY">12</span> | TOTAL 12345</span></div>
                         <div class="profile">
-                            <img class="profile-image" src="../mini_board/static/images/images.jpg">
-                            <div class="profile-text"><div id="basic-text">@zo_dang<br>HTML과 CSS 공부를 하면서 미니홈피 웹 페이지를 만드는 중입니다. 화이팅화이팅</div></div>
+                            <img class="profile-image" src="1./static/images/images.jpg">
+                            <div class="profile-text"><div id="basic-text">@######<br>나무위키는 파라과이 소재의 Umanle S.R.L.이 운영하는 영리 목적의 위키 웹사이트이다</div></div>
                             <div class="profile-dropdown">
-                                <div id="basic-text">(❁´◡`❁)</div>
+                                <div id="basic-text">(´◡`)</div>
                                 <div class="dropdown">
                                     <select>
                                         <option value="padotagi">파도타기</option>
@@ -79,20 +80,20 @@
                                 <hr> 
                                 <div class="update-box">
                                     <div class="new-text">
-                                        <div id="basic-text"><span id="photo">사진첩</span> 나보러 왔길래 손잡아줌</div>
-                                        <div id="basic-text"><span id="board">게시판</span> 웹코딩이 어렵다면 해봐</div> 
-                                        <div id="basic-text"><span id="photo">사진첩</span> 사실은 나도 어려워</div>
-                                        <div id="basic-text"><span id="board">게시판</span> 같이하자! HTML / CSS</div>
+                                        <div id="basic-text"><span id="photo">사진첩</span> aaaaaaaaaaaaaaaaaaaa</div>
+                                        <div id="basic-text"><span id="board">게시판</span> bbbbbbbbbbbbbbbbbbbb</div> 
+                                        <div id="basic-text"><span id="photo">사진첩</span> cccccccccccccccccccc</div>
+                                        <div id="basic-text"><span id="board">게시판</span> dddddddddddddddddddd</div>
                                     </div>
                                     <div class="new-image-container">
-                                        <img class="new-image" src="./static/images/new-image.jpg">
-                                        <img class="new-image" src="./static/images/new-image2.jpg">
-                                        <a href="#"><img class="plus-image" src="./static/images/plus-image.jpg"></a>
+                                        <img class="new-image" src="1./static/images/img.jpg">
+                                        <img class="new-image" src="1./static/images/img2.jpg">
+                                        <a href="#"><img class="plus-image" src="1./static/images/plus-image.jpg"></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="bottom-content">
-                                <div id="bold-text">Mini Room</div>
+                                <div id="bold-text">BOARD MINI</div>
                                 <hr>
                                 <table class="table table-hover">
                                     <thead>
@@ -117,8 +118,9 @@
                                         ?>
                                     </tbody>
                                 </table>
+                                <button type="button" class="btn"><a href="board_insert.php">작성</a></button>
+                                </div>
                             </div>
-                            
                         </div>
                     </div>
                     <div class="menu">

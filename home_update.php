@@ -45,6 +45,22 @@ else
     <title>Document</title>
     <style>
 
+    a.btn{
+        display:block;
+        width:80px;
+        line-height:30px;
+        text-align:center;
+        background-color:#222;
+        color:#fff;
+    }
+    
+    button.btn{
+        width:80px;
+        height:30px;
+        border:none;
+        background-color:#222;
+        color:#fff;
+    }
     
     </style>
 </head>
@@ -52,7 +68,7 @@ else
 <?php include ( URL_HEADER ); ?>
     <form method="post" action="board_update.php">
         <label for ="bno">게시글 번호 : </label>
-        <input type="text" name="board_no" id="bno" value="<?php echo $result_info['home_no']?>" readonly>
+        <input type="text" name="board_no" id="bno" value="<?php echo $result_info['board_no']?>" readonly>
         <br>
         <label for ="title">게시글 제목 : </label>
         <input type="text" name="board_title" id="title" value="<?php echo $result_info['board_title']?>" >

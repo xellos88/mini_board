@@ -41,15 +41,12 @@ body {
 .column1 {
   display: flex;
   flex-direction: column;
-  /*전체 너비에서 0.25 차지*/
   flex: 0.25;
   margin: 10px;
 }
 
 .visit {
   flex: 0.05;
-  padding: 5px;
-  /*문구 가운데 정렬*/
   margin: 0 auto;
 }
 
@@ -57,7 +54,6 @@ body {
   background-color: white;
   flex: 0.95;
   border-radius: 1%;
-  /*profile-image와 profile-text 세로 중앙 정렬*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,7 +81,6 @@ body {
 .column2 {
   display: flex;
   flex-direction: column;
-  /*전체 너비에서 0.65 차지*/
   flex: 0.65;
   margin: 10px 0 10px 10px;
 }
@@ -107,7 +102,6 @@ body {
 .menu {
   display: flex;
   flex-direction: column;
-  /*전체 너비에서 0.1 차지*/
   flex: 0.1;
   margin: 50px 0;
 }
