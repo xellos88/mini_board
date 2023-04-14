@@ -22,22 +22,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <title>게시글 작성</title>
+    <link rel="stylesheet" href="./common/board_css.css">
+	<title>board_insert</title>
 </head>
 <body>
     <?php include ( URL_HEADER ); ?>
-    <div class="bottom-content">
     <form method="post" action="board_insert.php">
-        <label for ="title">게시글 제목 : </label>
-        <input type="text" name="board_title" id="title" >
-        <br>
-        <label for="contents">게시글 내용 :</label>
-        <input type="text" name="board_contents" id="contents" >
-        <br>
-        <button type='submit' class="btn">작성</button>
-        <button type='button' class="btn"><a href  ="board_list.php">취소</a></button>
-</form>
-<div class="bottom-content">  
+    <div class="container">
+        <table class='table-striped'>
+            <tr>
+                <th class="radius-left">
+                    <label for="title">제목</label>
+                </th>
+                <td class="radius-right">
+                    <input type="text" name="board_title" id="title">
+                </td>
+            </tr>
+            <tr>
+                <th class="radius-left">
+                    <label  for="contents">내용</label>
+                </th>
+                <td class="radius-right">
+                <textarea rows="6" cols="10" name="board_contents" id="contents"></textarea>
+                </td>
+            </tr>
+        </table>
+        <div class="button">
+            <button type="submit" class="button_a">작성</button>
+            <a href="board_list.php" class="button_a">취소</a>
+        </div>
+        </form>
+    </div> 
 </body>
 </html>

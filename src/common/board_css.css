@@ -1,2 +1,136 @@
-@import url(style.css);
-@import url(media.css);
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nanum Gothic';
+}
+
+.container {
+    background-color: #3b5998;
+    width: 800px;
+    margin: 40px auto;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    color: #3b5998;
+    margin: 20px;
+    padding: 0 0 20px;
+    font-weight: 800;
+}
+
+h1 a:visited {
+    color: #3b5998;
+}
+
+td {
+    text-align: center;
+    background-color: white;
+    padding: 10px 0;
+	max-width: 200px;
+}
+
+th {
+    text-align: center;
+    background-color: white;
+    padding: 10px 0;
+    color: #3b5998;
+}
+
+.table-striped {
+    margin: 20px auto;
+    width: 500px;
+    border-collapse: separate;
+    border-spacing: 0 5px;
+}
+.div-striped {
+    margin: 20px auto;
+    width: 500px;
+    border-collapse: separate;
+    border-spacing: 0 5px;
+}
+p{
+    text-align: center;
+    background-color: white;
+    padding: 10px 0;
+	max-width: 200px;
+    color: #3b5998;
+}
+
+.button{
+    text-align: center;
+}
+.button_i {
+    text-align: right;
+    margin: 0 30px;
+}
+
+.button_a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #3b5998;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    line-height: 40px;
+    font-weight: 500;
+    margin: 0 2px;
+}
+
+.button_a_b {
+    display: inline-block;
+    height: 40px;
+    width: 100px;
+    background-color: #3b5998;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    line-height: 40px;
+    font-weight: 500;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 0 2px;
+}
+
+.aline_right {
+    text-align: right;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button_a:hover {
+    background-color: #3b5998;
+}
+
+td a {
+    text-decoration: none;
+    color: #000;
+}
+
+td a:hover {
+    color: #3b5998;
+    font-weight: 1000;
+}
+
+button {
+	background-color:transparent;
+	border-style: none;
+}
+
+input, textarea{
+	width: 90%;
+	background-color:transparent;
+	border-style: none;
+}
+
+textarea {
+	resize: none;
+}
