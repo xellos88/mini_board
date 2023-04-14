@@ -48,7 +48,7 @@
             </tr>
         </table>
         <div class="button">
-            <button type="submit" class="button_a">작성</button>
+            <a href="board_list.php" class="button_a" type="submit" >작성</a>
             <a href="board_list.php" class="button_a">취소</a>
         </div>
         </form>

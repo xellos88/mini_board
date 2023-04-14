@@ -13,7 +13,7 @@
         $page_num = 1;
     }
 
-    $limit_num = 5;
+    $limit_num = 10;
 
     // $page_num = $arr_get["page_num"];
     //게시판 정보 테이블 전체 카운트 획득
@@ -59,7 +59,7 @@
 	<?php include_once( URL_HEADER ) ?>
 	<div class="container">
 		<div class="button_i">
-			<a href="board_insert.php" class="button_a_b radius-right radius-left">게시글 작성</a>
+			<a href="board_insert.php" class="button_a_b radius-right radius-left">글쓰기</a>
 		</div>
 		<table class='table-striped'>
 			<thead>
