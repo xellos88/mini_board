@@ -23,7 +23,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./common/board_css.css">
-	<title>board_insert</title>
+	<title>board_</title>
 </head>
 <body>
     <?php include ( URL_HEADER ); ?>
@@ -48,7 +48,7 @@
             </tr>
         </table>
         <div class="button">
-            <a href="board_list.php" class="button_a" type="submit" >작성</a>
+            <button type="submit" class="button_a">작성</button>
             <a href="board_list.php" class="button_a">취소</a>
         </div>
         </form>
